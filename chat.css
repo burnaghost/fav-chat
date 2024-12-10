@@ -1,0 +1,246 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: monospace;
+}
+body.low{
+filter: brightness(0.2);
+}
+
+body.mid{
+    filter: brightness(0.5);
+}
+
+
+body.high{
+    filter: brightness(1);
+}
+
+body.dark_mode{
+    background-color: #000;
+    color: white;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.cont{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.phone{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    border: 4px solid #3aa0d7;
+    padding: 5px;
+    flex-wrap: wrap;
+    display: block;
+    overflow: auto;
+    position:absolute;
+    background-color: #000;
+    top: 2%;
+
+}
+.phone::-webkit-scrollbar{
+    display: none;
+}
+.phone header{
+    justify-content: space-between;
+    padding: 10px;
+    background-color:#1ea0bd;
+    border-radius: 10px;
+    position: static;
+}
+
+.chat_home{
+    display: flex;
+    justify-content: space-between;
+  
+}
+.chat_home nav li{
+    margin-inline: 10px;
+}
+
+.chat_home nav li:hover{
+    background-color: #24a9c7;
+    border-radius: 10px;
+    width: max-content;
+    cursor: pointer;
+    margin-inline: 10px;
+    font-weight: bold;
+}
+.people{
+    flex-grow: 1;
+    justify-content: space-between;
+    border: 2px solid #1ea0bd;
+    border-radius: 10px;
+    height: 15%;
+    padding: 2px;
+    margin: 5px;
+    color: white;
+    box-sizing: border-box;
+    width:auto;
+    display: flex;
+}
+.people h3{
+    padding: 2px;
+}
+.people img:hover{
+    transform:scale(1.2);
+    transition: .7s ease-in-out;
+}
+.owner{
+    flex-grow: 1;
+    display: grid;
+    position: sticky;
+    background-color: #b3d4d1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    animation: color ease 10s infinite;
+}
+@keyframes color{
+    0%{
+        background: linear-gradient(to right, #b3d4d1, #e0f7f1);
+        transition: .7s;
+    }
+    50%{
+        transition: .7s;
+        background: linear-gradient(to bottom, #b3d4d1, #a1c4c4);
+    }
+    100%{
+        transition: .7s;
+        background: linear-gradient(to top left, #b3d4d1, #4f9c9a);
+    }
+}
+.logo{
+    display:flex;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-wrap: wrap;
+    
+
+}
+.logo label{
+    color: greenyellow;
+}
+.inbox{
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    text-align: center;
+    overflow-y: auto;
+    background: #719191;
+    border-radius: 10px;
+    padding: 5px;
+    backdrop-filter: blur(5px);
+    
+}
+.inbox::-webkit-scrollbar{
+    display: none;
+}
+.inbox:hover{
+    background: #24a9c7;
+    transition: .7s;
+    color: #000;
+    transform:rotate(360deg);
+    transform: scale(1.1);
+
+}
+.logo-home{
+    display:block;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-grow: 1;
+    justify-content:space-around;
+    
+} 
+.people-last{
+    flex-grow: 1;
+}
+ footer{
+    display:flex;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content:space-evenly;
+    background-color: rgb(0, 0, 0);
+    flex-grow: 1;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    
+}
+footer span{
+    padding: 10px;
+}
+footer span:hover{
+    background-color: #111010;
+    border-radius: 10px;
+    
+}
+.message{
+    background-color: #68bacc;
+    color: white;
+    border:2px solid #000;
+    border-radius: 10px;
+    display:none;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    z-index: 100;
+    width: 50%;
+}
+.message button{
+    padding: 5px;
+}
+.message button:hover{
+    background-color: #1ea0bd;
+    color: greenyellow;
+}
+.settings_menu{
+    width: 50%;
+    border: 2px solid #bcced2;
+    background-color: #1ea0bd;
+    display:none;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: 100;
+    position: absolute;
+    top: 2%;
+    right: 10px;
+    flex-grow: 1;
+}
+.settings_menu p{
+    cursor: pointer;
+    text-align: center;
+    
+}
+.settings_menu p:hover{
+    background-color: #42747f;
+    border-radius: 10px;
+    transition: .7s;
+}
+.settings_menu button{
+margin: 2px;
+width: 100%;
+padding: 10px;
+border-radius: 10px;
+}
+.settings_menu button:hover{
+    background-color: #72c8db;
+}
+.settings button:hover{
+    background-color: #1ea0bd;
+    color: #000;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+   
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+   
+    <button style="margin: 10px;border-radius: 10px;padding: 10px;"id='dark'>Dark mode</button>
+    <div class="cont">
+<div class="phone">
+<header>
+    <div class="chat_home"id="chat_home">
+        <h2>Chat</h2>
+        <nav style="display: flex;padding:10px;box-sizing: border-box;flex-wrap: wrap;list-style-type:none;line-height:30px;">
+          <li id="people">People</li>
+          <li>Active</li>
+          <li id="settings">Settings</li>
+          <div class="settings_menu"id="settings_menu">
+           <p style="color: rgb(0, 0, 0);padding: 10px;background-color:#1ea0bd;">settings</p>
+           <button id="low">low</button>
+           <button id="mid">mid</button>
+           <button id="high">High</button>
+           <p id="close">cancel</p>
+         </div>
+
+          <script>
+            const settings=document.getElementById('settings');
+            const settings_menu=document.getElementById('settings_menu');
+            const close=document.getElementById('close');
+            const low=document.getElementById('low');
+            const mid=document.getElementById('mid');
+            const high=document.getElementById('high');
+           
+            settings.addEventListener('click',(event)=>{
+                settings_menu.style.display='grid';
+            });
+           close.addEventListener('click',()=>{
+            settings_menu.style.display='none';
+            event.stopPropagation();
+           });
+           low.addEventListener('click',()=>{
+            document.body.classList.toggle('low');
+           });
+           high.addEventListener('click',()=>{
+            document.body.classList.toggle('high');
+           });
+           mid.addEventListener('click',()=>{
+            document.body.classList.toggle('mid');
+           });
+
+           
+
+
+
+          </script>
+          
+         
+          
+        </nav>
+    </div>
+    <div class="message" id="msg">
+        <img src="https://w7.pngwing.com/pngs/562/844/png-transparent-new-notification-notification-alert-bell-alarm-message-3d-icon-thumbnail.png" alt=""style="height:50px;width: 50px;border-radius:50%">
+        <h4>Status</h4>
+        <p>1 person inactive </p>
+        <button id="cancel"style="border-radius:10px">cancel</button>
+        <script>
+            const msg=document.getElementById('msg');
+            const cancel=document.getElementById('cancel');
+            const people =document.getElementById('people');
+            const chat_home=document.getElementById('chat_home');
+
+        people.onclick=function(){
+            msg.style.display='grid'
+        };
+        cancel.onclick=function(){
+            msg.style.display='none';
+        };
+        window.onclick=function(even){
+            if(even.target==chat_home){
+                msg.style.display='none';
+            }
+        }
+
+        </script>
+      </div>
+</header>
+&nbsp;
+<div class="owner">  
+    <div class="logo-home">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThZPctOVwKuGYUwyTdjRCJpwGE1zUET46wug&s"style="width: 100px;height:100px;border-radius:50%;border:2px solid #24a9c7;">
+        <h3>Gwiza Elvis</h3>
+        <label for="">Owner</label>
+    </div>
+    <div class="inbox">Trying 2 manage life👌</div>
+    
+    </div>
+    &nbsp;
+<div class="people">  
+<div class="logo">
+    <img src="https://w7.pngwing.com/pngs/498/300/png-transparent-hackers-security-hacker-wifi-password-hacker-prank-android-computer-icons-android-computer-network-internet-rooting-thumbnail.png"style="width: 50px;height:50px;border-radius:50%">
+    <h3>Burna Ghost</h3>
+   
+</div>
+<div class="inbox">
+    <label for="" style="color: greenyellow;">active</label>
+  <p style="text-align: left;">Hey! Just wanted to check in and see how you’re doing. Let me know when you’re free to chat!</p>
+</div>
+
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/726/950/png-transparent-anime-drawing-boy-anime-boy-black-hair-manga-chibi-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+        <h3>Godwin</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active now</label>
+        <p style="text-align: left;">I found that article we discussed
+            last week and thought it was interesting.
+            Let me know when you have
+            a moment to chat about it.
+            I’d love to hear your thoughts!</p>
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/472/648/png-transparent-girl-using-laptop-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Nicky</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active now</label>
+        <p style="text-align: left;">Quick question about the project
+            we’re working on together, if you don’t mind.
+            Can we talk later today?
+            I have a few ideas to share.
+            Looking forward to your response soon!</p>
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/454/992/png-transparent-make-up-artist-course-class-nail-mulher-miscellaneous-purple-cosmetics-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Dania</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active</label>
+        <p style="text-align: left;">Hey! I just wanted to say
+            that I really miss you lately.
+            Things haven't been the same without
+            our chats and laughter together.
+            Hope to see you soon!</p>
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/720/229/png-transparent-joker-batman-alfred-pennyworth-joker-comics-heroes-fictional-character-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Japhet</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active</label>
+        <p style="text-align: left;">Hey! Just wanted to remind you
+            that you're running late for work today.
+            Make sure to hurry up and leave!
+            We don’t want you to miss anything.
+            Hope to see you soon at the office!</p>
+
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/175/592/png-transparent-laptop-computer-cases-housings-gaming-computer-desktop-computers-laptop-game-computer-network-electronics-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Eric</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active</label>
+        <p style="text-align: left;">You are needed at the office urgently.
+            Your presence is important for today’s meeting.
+            Please hurry, as everyone is waiting for you.
+            We need your input on the current project.
+            Looking forward to seeing you soon!</p>
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/663/153/png-transparent-tree-tree-s-leaf-grass-transparent-tree-cliparts-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Head-master</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: rgb(0, 0, 0);">active 3m ago</label>
+        <p style="text-align: left;">Just a reminder that school
+            is starting on Monday morning.
+            Make sure you have all
+            your supplies ready and organized.
+            Looking forward to seeing you there!</p>
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/747/656/png-transparent-prague-astronomical-clock-old-town-hall-old-town-square-retro-clock-digital-digital-clock-retro-pattern-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Benjamin</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active</label>
+        <p style="text-align: left;">The boy and the girl didn’t show up
+            for the meeting we planned today.
+            I waited for them for a while,
+            but it seems they might be busy.
+            Just wanted to keep you in the loop!</p>
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/30/25/png-transparent-will-vandom-irma-lair-velociraptor-clever-girl-television-tyrannosaurus-fauna-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Elisa</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active</label>
+        <p style="text-align: left;">The project is almost complete and
+            we’re just finalizing the last few details.</p>
+    </div>
+</div>
+<div class="people">
+    <div class="logo">
+        <img src="https://w7.pngwing.com/pngs/168/55/png-transparent-drawing-boy-hat-boy-child-painted-hand-thumbnail.png" alt=""style="width: 50px;height:50px;border-radius:50%">
+    <h3>Frank</h3>
+    </div>
+    <div class="inbox">
+        <label for="" style="color: greenyellow;">active</label>
+        <p style="text-align: left;">Brother, when are you coming over?
+            We’ve missed you so much lately.
+            There’s a lot to catch up on,
+            and everyone is looking forward to seeing you.
+            Let me know your plans soon!</p>
+    </div>
+</div>
+<div class="people-last">
+    <footer>
+        <span>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path
+                fill="#fefefe"
+                d="M12 3l-10 9h3v9h4v-5h4v5h4v-9h3l-10-9z"/>
+        </svg>
+        </span>
+
+        <span>
+            <span>
+                <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24">
+    <path
+        fill="#fefefe"
+        d="M7 4h10v2H7V4zm0 8h10v2H7v-2zm0 4h10v2H7v-2z"/>
+</svg>
+            </span>
+        </span>
+        <span><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="24"
+            viewBox="0 0 1 24">
+            <path
+                fill="#fefefe"
+                d="M4 12l8-8v6h8v4h-8v6l-8-8z"/>
+        </svg></span>
+        
+    
+       </footer>
+</div>
+
+</div>
+<script>
+    const dark=document.getElementById('dark');
+    dark.addEventListener('click',()=>{
+        document.body.classList.toggle('dark_mode');
+    });
+</script>
+</div>
+    
+</body>
+</html>
